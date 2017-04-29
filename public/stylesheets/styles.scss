@@ -1,0 +1,121 @@
+@charset "utf-8";
+
+@import 'utils/variables';
+@import 'utils/core';
+
+.loading {
+  padding: 1em;
+}
+
+.close-sidebar-control {
+  position:absolute;
+  left: 1em;
+  bottom: 0;
+}
+
+.ng-sidebar {
+  background-color: #1769ff;
+  overflow: auto;
+  pointer-events: auto;
+  position: fixed;
+  will-change: initial;
+  z-index: 99999999;
+}
+
+.ng-sidebar--left {
+  bottom: 0;
+  left: 0;
+  top: 0;
+}
+
+.ng-sidebar--right {
+  bottom: 0;
+  right: 0;
+  top: 0;
+}
+
+.ng-sidebar--top {
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.ng-sidebar--bottom {
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.ng-sidebar--inert {
+  pointer-events: none;
+  will-change: transform;
+}
+
+.ng-sidebar--animate.ng-sidebar {
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0, 0, 0.3, 1);
+  transition: transform 0.3s cubic-bezier(0, 0, 0.3, 1);
+}
+
+.main-content {
+  margin-outside: 2em;
+  padding: 1em;
+}
+
+.demo-header {
+  align-items: center;
+  background: #282828;
+  box-shadow: 0 0.1em 1.5em rgba($dark-grey, 0.5);
+  color: $white;
+  display: flex;
+  padding: 1em;
+}
+
+  .demo-header__toggle {
+    background: transparent;
+    border: 0.15rem solid $white;
+    border-left: 0;
+    border-right: 0;
+    cursor: pointer;
+    font-size: 0;
+    height: 1.7rem;
+    margin-right: 1rem;
+    position: relative;
+    width: 2rem;
+
+    &::after {
+      background: $white;
+      content: '';
+      height: 0.15rem;
+      left: 0;
+      margin-top: -0.075rem;
+      position: absolute;
+      top: 50%;
+      width: 100%;
+    }
+  }
+
+.demo-sidebar {
+  padding: 2em 1em;
+
+  &.ng-sidebar--opened.ng-sidebar--over {
+    box-shadow: 0 0 2.5em rgba(85, 85, 85, 0.5);
+  }
+}
+
+.demo-contents {
+  padding: 0 2em;
+}
+
+.demo-control {
+  background-color: #a6e1ec;
+  border: 1px solid $dark-grey;
+  cursor: pointer;
+  margin-bottom: 0.5em;
+  padding: 0.5em 2em;
+  transition: background-color 0.15s;
+
+  &:hover {
+    background-color: $dark-grey;
+    color: $white;
+  }
+}

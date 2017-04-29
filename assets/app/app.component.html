@@ -1,0 +1,94 @@
+<ng-sidebar-container>
+    <ng-sidebar
+            [(opened)]="_opened"
+            [mode]="_MODES[_modeNum]"
+            [keyClose]="_keyClose"
+            [position]="_POSITIONS[_positionNum]"
+            [dockedSize]="'50px'"
+            [autoCollapseHeight]="_autoCollapseHeight"
+            [autoCollapseWidth]="_autoCollapseWidth"
+            [closeOnClickOutside]="_closeOnClickOutside"
+            [closeOnClickBackdrop]="_closeOnClickBackdrop"
+            [showBackdrop]="_showBackdrop"
+            [animate]="_animate"
+            [trapFocus]="_trapFocus"
+            [autoFocus]="_autoFocus"
+            [sidebarClass]="'demo-sidebar'"
+            [ariaLabel]="'My sidebar'"
+            (onOpenStart)="_onOpenStart()"
+            (onOpened)="_onOpened()"
+            (onCloseStart)="_onCloseStart()"
+            (onClosed)="_onClosed()"
+            (onAnimationStart)="_onAnimationStart($event)"
+            (onAnimationDone)="_onAnimationDone($event)">
+        <p>BODA PRINTS</p>
+        <button class="demo-control" (click)="_toggleOpened()">Close sidebar</button>
+        <p class="close-sidebar-control"><a closeSidebar>   <-- Close Menu</a></p>
+    </ng-sidebar>
+    <header class="demo-header">
+        <button (click)="_toggleOpened()" class="demo-header__toggle">Toggle sidebar</button>
+        <span><a>B</a>O<a>DA</a> PRINTS</span>
+    </header>
+    <section class="demo-contents">
+        <h1>UNDER CONSTRUCTION</h1>
+
+
+
+
+
+
+
+
+        <div class="main-content">
+            <div class="container-fluid">
+
+
+                <div class="row">
+
+                    <div class="col-lg-6 col-md-12">
+                        <div class="card" >
+                            <div class="card-header" data-background-color="orange">
+                                <h4 class="title">SERVICES</h4>
+                                <p class="category">  </p>
+                            </div>
+
+                            <div class="card-content">
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="profile">
+                                        <table class="table">
+                                            <tbody>
+                                            <tr>
+                                                <td>SCREEN PRINTING</td>
+                                            </tr>
+                                            <tr>
+                                                <td>EMBROIDERY</td>
+                                            </tr>
+                                            <tr>
+                                                <td>VINYL HEAT TRANSFERS</td>
+                                            </tr>
+                                            <tr>
+                                                <td>CUSTOM IMPRINTS</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+<p>Call Us: 202-957-5972</p>
+<p>Acton, MA 01720</p>
+
+
+    </section>
+</ng-sidebar-container>
