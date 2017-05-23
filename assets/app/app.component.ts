@@ -6,11 +6,7 @@ import { Component, AnimationTransitionEvent } from '@angular/core';
     templateUrl: './app.component.html'
 })
 export class AppComponent {
-<<<<<<< HEAD
-    private _opened: boolean = true;
-=======
     private _opened: boolean = false;
->>>>>>> add routes
     private _modeNum: number = 1;
     private _positionNum: number = 0;
     private _closeOnClickOutside: boolean = false;
